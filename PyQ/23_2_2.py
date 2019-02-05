@@ -1,0 +1,7 @@
+print("'ABCAB'.count('AB):", 'ABCAB'.count('AB'))
+print("'ABC'.find('X'):", 'ABC'.find('X'))
+print("'ABC'.index('B'):", 'ABC'.index('B'))
+print("'ABC'.endswith('BC'):", 'ABC'.endswith('BC'))
+print("'ABC'.startswith('AB'):", 'ABC'.startswith('AB'))
+print("'ABC'.startswith('BA'):", 'ABC'.startswith('BA'))
+print("'ABC'.startswith(('AB','BA')):", 'ABC'.startswith(('AB', 'BA')))
