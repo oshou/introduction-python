@@ -9,8 +9,10 @@ hiragana_list = [
     "ま", "み", "む", "め", "も", "や", "ゆ", "よ", "ら", "り", "る", "れ", "ろ", "わ", "を", "ん"
 ]
 
+#driver = webdriver.Chrome(
+    #executable_path='C:\Program Files\chromedriver_win32\chromedriver.exe')
 driver = webdriver.Chrome(
-    executable_path='C:\Program Files\chromedriver_win32\chromedriver.exe')
+    executable_path='/usr/bin/chromedriver')
 driver.get('https://anime.dmkt-sp.jp/animestore/c_all_pc?initialCollectionKey=1')
 results = {}
 for hiragana in hiragana_list:
