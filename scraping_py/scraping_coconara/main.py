@@ -11,7 +11,10 @@ options = Options()
 options.add_argument('--headless')
 options.add_argument('--no-sandbox')
 options.add_argument('--disable-gpu')
-browser = webdriver.Chrome(options=options)
+browser = webdriver.Chrome(
+    executable_path="/root/.pyenv/versions/3.6.6rc1/lib/python3.6/site-packages/chromedriver_binary/chromedriver", options=options)
+# browser = webdriver.Chrome(
+#    executable_path='/usr/local/bin/chromedriver', options=options)
 
 browser.get("https://coconala.com/categories/11")
 
