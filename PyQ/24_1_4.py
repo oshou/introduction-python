@@ -1,6 +1,6 @@
 def func(x=None):
     if x is None:
-        print("引数を指定してください")
+        print("引数を指定して下さい")
     elif x == 0:
         print("0です")
     elif x < 0:

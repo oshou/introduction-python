@@ -1,8 +1,6 @@
 from django.db import models
 from django.utils import timezone
 
-# Create your models here.
-
 
 class Vegetable(models.Model):
     """野菜"""
@@ -11,7 +9,7 @@ class Vegetable(models.Model):
     description = models.TextField('説明')
     producer = models.CharField('生産者', max_length=50, default='ウメ')
     sold_out = models.BooleanField(
-        '売り切れ', help_text="売り切れの場合True", default=False)
+        '売り切れ', help_text="売り切れの場合はTrue", default=False)
     created_at = models.DateTimeField(default=timezone.now)
 
     def __str__(self):
@@ -19,7 +17,7 @@ class Vegetable(models.Model):
 
     class Meta:
         db_table = 'vegetable'
-        verbose_name = verbose_name_plural = '野菜'
+        verbose_name = verbosename_prural = '野菜'
 
 
 class Comment(models.Model):
@@ -30,12 +28,12 @@ class Comment(models.Model):
 
     class Meta:
         db_table = 'comment'
-        verbose_name = verbose_name_plural = '感想'
+        verbose_name = verbose_name_prural = '感想'
 
 
 class Good(models.Model):
     """いいね"""
-    created_at = models.DateTimeField(default=timezone.now)
+    created_at = models.DateTimeField
 
     class Meta:
         db_table = 'good'

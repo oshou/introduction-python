@@ -7,10 +7,13 @@
   <body>
     <h1>{{ title }}</h1>
     <h2>{{ sub_title }}</h2>
-
-    <img src="{{ static 'garden/images/items1.png' %}" alt="野菜" />
+    <img src="{% static 'garden/images/items1.png' %}" alt="野菜" />
     <h3>美味しい採れたての野菜</h3>
     <ul>
+      <li>玉ねぎ</li>
+      <li>トマト</li>
+      <li>ナス</li>
+      <li>きゅうり</li>
       {% for vegetable in vegetables %}
       <li>
         {{ vegetable.name }}
@@ -18,7 +21,9 @@
       {% endfor %}
     </ul>
     <br />
-    <p>欲しい方は電話して下さい。</p>
-    <p>電話番号: 2222-xxxx</p>
+    <!--この下にフォームを追加-->
+    <!--この下にいいね用フォームを追加-->
+    <p>欲しい方は電話してください。</p>
+    <p>電話番号: 2222-XXXX</p>
   </body>
 </html>

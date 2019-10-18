@@ -15,10 +15,12 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Comment',
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('id', models.AutoField(auto_created=True,
+                                        primary_key=True, serialize=False, verbose_name='ID')),
                 ('name', models.CharField(max_length=50, verbose_name='名前')),
                 ('message', models.CharField(max_length=200, verbose_name='メッセージ')),
-                ('created_at', models.DateTimeField(default=django.utils.timezone.now)),
+                ('created_at', models.DateTimeField(
+                    default=django.utils.timezone.now)),
             ],
             options={
                 'verbose_name': '感想',
@@ -29,8 +31,10 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Good',
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('created_at', models.DateTimeField(default=django.utils.timezone.now)),
+                ('id', models.AutoField(auto_created=True,
+                                        primary_key=True, serialize=False, verbose_name='ID')),
+                ('created_at', models.DateTimeField(
+                    default=django.utils.timezone.now)),
             ],
             options={
                 'verbose_name': 'いいね',
@@ -41,13 +45,17 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Vegetable',
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('id', models.AutoField(auto_created=True,
+                                        primary_key=True, serialize=False, verbose_name='ID')),
                 ('name', models.CharField(max_length=100, verbose_name='名前')),
                 ('price', models.IntegerField(default=0, verbose_name='値段')),
                 ('description', models.TextField(verbose_name='説明')),
-                ('producer', models.CharField(default='ウメ', max_length=50, verbose_name='生産者')),
-                ('sold_out', models.BooleanField(default=False, help_text='売り切れの場合True', verbose_name='売り切れ')),
-                ('created_at', models.DateTimeField(default=django.utils.timezone.now)),
+                ('producer', models.CharField(
+                    default='ウメ', max_length=50, verbose_name='生産者')),
+                ('sold_out', models.BooleanField(default=False,
+                                                 help_text='売り切れの場合True', verbose_name='売り切れ')),
+                ('created_at', models.DateTimeField(
+                    default=django.utils.timezone.now)),
             ],
             options={
                 'verbose_name': '野菜',
